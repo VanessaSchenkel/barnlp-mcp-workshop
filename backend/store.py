@@ -166,9 +166,8 @@ class BarStore:
                 detail=f"Mesa {table_id} não possui itens para fechar.",
             )
 
-        order = self.order_for(table_id)
         table.status = TableStatus.CLOSED
-        return order
+        return self.order_for(table_id)
 
 
 store = BarStore()
